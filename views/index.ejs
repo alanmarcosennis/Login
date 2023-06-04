@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de inicio</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Bienvenido</h1>
+  <% if (user) { %>
+    <p>Hola, <%= user.email %></p>
+    <a href="/logout">Cerrar sesión</a>
+  <% } else { %>
+    <a href="/register">Registrarse</a>
+    <a href="/login">Iniciar sesión</a>
+  <% } %>
+</body>
+</html>
